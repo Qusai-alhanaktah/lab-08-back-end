@@ -5,7 +5,7 @@ CREATE TABLE location (
     formatted_query VARCHAR(255),
     latitude VARCHAR(255),
     longitude VARCHAR(255),
-    search_query VARCHAR(255),
+    search_query VARCHAR(255)
 );
 
 DROP TABLE IF EXISTS weather;
@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS weather;
 CREATE TABLE weather (
     id SERIAL PRIMARY KEY,
     time VARCHAR(255),
-    forecast VARCHAR(255),
+    forecast VARCHAR(255)
 );
 
 DROP TABLE IF EXISTS events;
@@ -23,5 +23,5 @@ CREATE TABLE events (
     link VARCHAR(255),
     name VARCHAR(255),
     event_date VARCHAR(255),
-    summary VARCHAR(255),
+    summary VARCHAR(255)
 );
