@@ -25,26 +25,26 @@ server.get('/', (request, response) => {
 });
 // ///////////////////////////
 
-server.get('/people', (request,response)=>{
-    let sql = `SELECT * FROM people`;
-    client.query(sql)
-    .then((data)=>{
-        console.log(data.rows)
-        response.status(200).json(data.rows);
-    });
-});
+// server.get('/people', (request,response)=>{
+//     let sql = `SELECT * FROM people`;
+//     client.query(sql)
+//     .then((data)=>{
+//         console.log(data.rows)
+//         response.status(200).json(data.rows);
+//     });
+// });
 
-server.get('/add', (request,response)=>{
-    let first = request.query[`first`];
-    let last = request.query[`last`];
+// server.get('/add', (request,response)=>{
+//     let first = request.query[`first`];
+//     let last = request.query[`last`];
     
-    let sql = `INSERT INTO people(first_name, last_name) VALUES ($1, $2) RETURNING*`
-    let queryData = [first, last];
-    client.query(sql,queryData)
-    .then((data)=>{
-        response.status(200).json("worked");
-    });
-});
+//     let sql = `INSERT INTO people(first_name, last_name) VALUES ($1, $2) RETURNING*`
+//     let queryData = [first, last];
+//     client.query(sql,queryData)
+//     .then((data)=>{
+//         response.status(200).json("worked");
+//     });
+// });
 
 // ///////////////////////////
 
